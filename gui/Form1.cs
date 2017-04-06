@@ -76,7 +76,7 @@ namespace ds3231_check
                 textBox2.Text = clockTime.ToString("yyyy/MM/dd HH:mm:ss");
                 diff = (diff * diffamount + clockTime.Subtract(realTime).TotalSeconds) / (diffamount + 1);
                 diffamount++;
-                textBox3.Text = diff.ToString();
+                textBox3.Text = Math.Round(diff,3).ToString();
             }
             else
             {
